@@ -1,0 +1,598 @@
+/* Tipografía y Variables (Palette basada en el diseño de Ing 360) */
+:root {
+    --primary-yellow: #f5b922;
+    /* Amarillo Energía */
+    --primary-hover: #dfa61e;
+
+    --dark-blue: #0b223d;
+    /* Hero / Navbar top */
+    --darker-blue: #071526;
+    /* ¿Por qué elegirnos? */
+    --medium-blue: #1c3c66;
+    /* Detalles */
+
+    --text-dark: #2c3e50;
+    --text-light: #5f748d;
+    --white: #ffffff;
+    --light-gray: #f2f6f9;
+    /* Fondo de servicios */
+
+    --transition: all 0.3s ease;
+
+    /* Colores Cajas Servicios (Inspirados en la imagen 2) */
+    --card-white: #ffffff;
+    --card-yellow: #fff3ce;
+    --card-blue: #234c7a;
+    --card-dark: #122845;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+/* Clases Útiles */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 5rem 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-sm {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-yellow);
+    color: var(--dark-blue);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 185, 34, 0.4);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--dark-blue);
+}
+
+.btn-outline-dark {
+    background-color: transparent;
+    border-color: var(--dark-blue);
+    color: var(--dark-blue);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--dark-blue);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+    padding: 0.6rem 0;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-info i {
+    width: 14px;
+    height: 14px;
+    color: var(--primary-yellow);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+.logo-icon {
+    color: var(--primary-yellow);
+    width: 26px;
+    height: 26px;
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.logo-text span {
+    color: var(--primary-yellow);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-yellow);
+}
+
+.mobile-menu-btn {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 80vh;
+    min-height: 550px;
+    background-image: url('../img/hero-inicio.jpg');
+    /* Obra Civil */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(11, 34, 61, 0.95) 0%, rgba(11, 34, 61, 0.7) 45%, rgba(11, 34, 61, 0.2) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    line-height: 1.15;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Sobre Nosotros */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.about-text p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.about-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--dark-blue);
+    background: var(--light-gray);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+}
+
+.badge-icon {
+    color: var(--primary-yellow);
+    width: 18px;
+    height: 18px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Servicios */
+.bg-light {
+    background-color: var(--light-gray);
+    position: relative;
+    overflow: hidden;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d1d8e0' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.service-card {
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.service-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Colores de las tarjetas */
+.card-white {
+    background-color: var(--card-white);
+    color: var(--dark-blue);
+}
+
+.card-white .service-icon {
+    background-color: #f1f5fa;
+    color: var(--primary-yellow);
+}
+
+.card-light-yellow {
+    background-color: var(--card-yellow);
+    color: var(--dark-blue);
+}
+
+.card-light-yellow .service-icon {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: var(--dark-blue);
+}
+
+.card-blue {
+    background-color: var(--card-blue);
+    color: var(--white);
+}
+
+.card-blue .service-icon {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--primary-yellow);
+}
+
+.card-dark-blue {
+    background-color: var(--card-dark);
+    color: var(--white);
+}
+
+.card-dark-blue .service-icon {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--primary-yellow);
+}
+
+/* La 5ta tarjeta como acento de color sólido */
+.card-accent {
+    background-color: var(--primary-yellow);
+    color: var(--dark-blue);
+}
+
+.card-accent .service-icon {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: var(--dark-blue);
+}
+
+/* Truco para centrar las 2 últimas tarjetas en el grid de 3 columnas */
+.grid-center-bottom {
+    grid-column: span 1;
+}
+
+.grid-center-bottom:nth-child(4) {
+    grid-column-start: 1;
+    /* Esto hace que se alinee pero queremos centrar. Flex/CSS Grid lo solucionan diferente. 
+    Una forma es usar flex en el padre para las dos últimas, pero con grid usamos place-self o cambiamos la estructura en Responsive */
+}
+
+/* ¿Por qué Elegirnos? */
+.why-choose-us {
+    background-color: var(--darker-blue);
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    /* Estrella ligera */
+    position: relative;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+}
+
+.value-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+    padding: 2rem 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.value-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    width: 45px;
+    height: 45px;
+    background-color: var(--primary-yellow);
+    color: var(--dark-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem;
+}
+
+.value-item h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.value-item p {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Footer (Inspirado en Imagen 3) */
+.site-footer {
+    background: linear-gradient(180deg, #9caebf 0%, #859cae 100%);
+    position: relative;
+    border-bottom: 15px solid var(--primary-yellow);
+}
+
+.footer-content {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 2.5rem 3rem;
+    border: 4px solid #6b8296;
+    background-color: rgba(255, 255, 255, 0.15);
+    max-width: 800px;
+    border-radius: 2px;
+}
+
+.contact-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    color: #3b505f;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.footer-icon {
+    color: #3b505f;
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 1rem 0;
+    color: #e2e8ec;
+    font-size: 0.85rem;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .values-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        display: none;
+    }
+
+    .nav-links,
+    .btn-contact {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--dark-blue);
+        cursor: pointer;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-center-bottom:nth-child(4) {
+        grid-column-start: auto;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-contact-block {
+        padding: 1.5rem;
+        border-width: 2px;
+    }
+
+    .contact-line {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

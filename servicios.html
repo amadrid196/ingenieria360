@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Ingeniería 360</title>
+    <meta name="description"
+        content="Portafolio de servicios en ingeniería civil, eléctrica, mecánica, mantenimiento integral y desarrollo de sistemas.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .hero-small {
+            height: 40vh;
+            min-height: 350px;
+            background-image: url('img/hero-servicios.jpg');
+            /* Industria / Data Centers */
+            justify-content: center;
+        }
+
+        .hero-small h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-detail-block {
+            margin-bottom: 4rem;
+            padding: 3rem;
+            background: var(--light-gray);
+            border-radius: 12px;
+            border-left: 6px solid var(--primary-yellow);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            transition: var(--transition);
+        }
+
+        .service-detail-block:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .service-detail-block h2 {
+            color: var(--dark-blue);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .service-detail-icon {
+            color: var(--primary-yellow);
+            background: var(--white);
+            padding: 0.8rem;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-detail-block ul {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .service-detail-block li {
+            position: relative;
+            padding-left: 2.2rem;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+        }
+
+        .service-detail-block li strong {
+            color: var(--dark-blue);
+            font-weight: 600;
+        }
+
+        .service-detail-block li i {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: var(--primary-yellow);
+            width: 18px;
+            height: 18px;
+        }
+
+        @media (min-width: 768px) {
+            .service-detail-block ul {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra Superior -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-info">
+                <span><i data-lucide="phone"></i> +504 3221-6857</span>
+                <span><i data-lucide="mail"></i> ingenieria360hn@gmail.com</span>
+            </div>
+            <div class="social-links">
+                <span>Soluciones Integrales en Ingeniería</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación -->
+    <header class="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="logo">
+                <i data-lucide="settings" class="logo-icon"></i>
+                <span class="logo-text">ingeniería <span>360</span></span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#nosotros">Nosotros</a>
+                <a href="servicios.html" class="active">Servicios</a>
+            </nav>
+
+            <a href="#contacto" class="btn btn-primary btn-sm btn-contact">Cotizar</a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Small -->
+    <section class="hero hero-small">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center">
+            <h1>Portafolio de Servicios</h1>
+            <p>Soluciones integrales diseñadas para la excelencia operativa.</p>
+        </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section class="section-padding">
+        <div class="container">
+
+            <!-- Service 1 -->
+            <div class="service-detail-block" id="civil">
+                <h2>
+                    <div class="service-detail-icon"><i data-lucide="building-2"></i></div> Ingeniería Civil e
+                    Infraestructura
+                </h2>
+                <ul>
+                    <li><i data-lucide="check"></i> <strong>Diseño y Planificación:</strong> Elaboración de planos
+                        estructurales, estudios de suelo, levantamientos topográficos y diseño arquitectónico funcional.
+                    </li>
+                    <li><i data-lucide="check"></i> <strong>Construcción de Obras Civiles:</strong> Ejecución de
+                        proyectos residenciales, comerciales e industriales bajo estándares de alta resistencia.</li>
+                    <li><i data-lucide="check"></i> <strong>Infraestructura para Datos y Energía:</strong> Construcción
+                        especializada de subestaciones eléctricas y cimentaciones para equipos de precisión.</li>
+                    <li><i data-lucide="check"></i> <strong>Movimiento de Tierras:</strong> Terracería a gran escala,
+                        excavaciones y preparación de plataformas industriales.</li>
+                </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-detail-block" id="electrica">
+                <h2>
+                    <div class="service-detail-icon"><i data-lucide="zap"></i></div> Ingeniería Eléctrica y Potencia
+                </h2>
+                <ul>
+                    <li><i data-lucide="check"></i> <strong>Sistemas de Potencia:</strong> Instalación y mantenimiento
+                        de transformadores, subestaciones y centros de carga de media y baja tensión.</li>
+                    <li><i data-lucide="check"></i> <strong>Respaldo Crítico (UPS y Generadores):</strong>
+                        Implementación de sistemas de energía ininterrumpida y plantas eléctricas de emergencia para
+                        operación 24/7.</li>
+                    <li><i data-lucide="check"></i> <strong>Infraestructura de Data Centers:</strong> Diseño y
+                        mantenimiento electromecánico especializado para centros de cómputo y salas de servidores.</li>
+                    <li><i data-lucide="check"></i> <strong>Gestión de Energía:</strong> Auditorías de eficiencia
+                        energética y optimización de redes eléctricas para reducción de costos operativos.</li>
+                    <li><i data-lucide="check"></i> <strong>Energías Renovables:</strong> Evaluación, diseño e
+                        instalación de sistemas de energías renovables y paneles solares.</li>
+                </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-detail-block" id="mecanica">
+                <h2>
+                    <div class="service-detail-icon"><i data-lucide="thermometer-snowflake"></i></div> Ingeniería
+                    Mecánica y HVAC
+                </h2>
+                <ul>
+                    <li><i data-lucide="check"></i> <strong>Climatización Industrial (HVAC):</strong> Diseño,
+                        instalación y mantenimiento de sistemas de aire acondicionado de precisión, Chillers, sistemas
+                        VRF, Unidades Paquete, Split ducto y Minisplit.</li>
+                    <li><i data-lucide="check"></i> <strong>Sistemas Contra Incendios:</strong> Implementación de redes
+                        hidráulicas y sistemas de detección/supresión bajo estricta normativa NFPA.</li>
+                    <li><i data-lucide="check"></i> <strong>Ventilación Mecánica:</strong> Extracción e inyección de
+                        aire y sistemas de ductería para naves industriales.</li>
+                    <li><i data-lucide="check"></i> <strong>Mantenimiento Mecánico:</strong> Diagnóstico y reparación de
+                        componentes mecánicos industriales para prolongar la vida útil de los activos.</li>
+                </ul>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-detail-block" id="mantenimiento">
+                <h2>
+                    <div class="service-detail-icon"><i data-lucide="tool"></i></div> Gestión de Mantenimiento Integral
+                </h2>
+                <ul>
+                    <li><i data-lucide="check"></i> <strong>Mantenimiento Preventivo:</strong> Programas de
+                        mantenimiento programados para evitar paros no deseados en sistemas eléctricos y mecánicos.</li>
+                    <li><i data-lucide="check"></i> <strong>Mantenimiento Correctivo:</strong> Atención de emergencias
+                        técnicas con personal calificado para la restauración inmediata del servicio.</li>
+                    <li><i data-lucide="check"></i> <strong>Gestión de Activos:</strong> Supervisión continua de la
+                        infraestructura para asegurar que todos los sistemas operen en su punto de máxima eficiencia.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="service-detail-block" id="sistemas">
+                <h2>
+                    <div class="service-detail-icon"><i data-lucide="monitor-dot"></i></div> Desarrollo de Software y
+                    Sistemas a la Medida
+                </h2>
+                <ul>
+                    <li><i data-lucide="check"></i> <strong>Sistemas a la Medida:</strong> Programación y desarrollo de
+                        software corporativo diseñado específicamente para las operaciones y flujos de trabajo de tu
+                        empresa.</li>
+                    <li><i data-lucide="check"></i> <strong>Integración e IoT:</strong> Sistemas de monitoreo digital
+                        para componentes electromecánicos, control remoto industrial y captación de datos (Data Centers,
+                        HVAC).</li>
+                    <li><i data-lucide="check"></i> <strong>Automatización de Procesos:</strong> Digitalización de
+                        procesos manuales, inventarios técnicos y registros de mantenimiento a través de plataformas web
+                        seguras.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-contact-block text-center" style="align-items: center; max-width: 600px;">
+                <h3 style="color: var(--dark-blue); font-size: 1.8rem; margin-bottom: 1rem;">¿Listo para iniciar su
+                    proyecto?</h3>
+                <p style="color: #3b505f; margin-bottom: 2rem;">Contáctenos hoy mismo para recibir una evaluación
+                    técnica y asesoría especializada.</p>
+                <div class="contact-line" style="justify-content: center; margin-bottom: 0.5rem;">
+                    <i data-lucide="phone" class="footer-icon"></i>
+                    <span>+504 3221-6857</span>
+                </div>
+                <div class="contact-line" style="justify-content: center; margin-bottom: 1.5rem;">
+                    <i data-lucide="mail" class="footer-icon"></i>
+                    <span>ingenieria360hn@gmail.com</span>
+                </div>
+                <a href="mailto:ingenieria360hn@gmail.com" class="btn btn-primary"
+                    style="font-size: 1.1rem; padding: 1rem 2rem;">Solicitar Cotización</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; 2026 Ingeniería 360. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
