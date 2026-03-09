@@ -180,8 +180,8 @@ body {
 }
 
 .logo-img {
-    height: 60px;
-    /* Tamaño optimizado para impacto visual */
+    height: 80px;
+    /* Tamaño premium para el logo corporativo */
     width: auto;
     display: block;
     object-fit: contain;
@@ -189,15 +189,7 @@ body {
 }
 
 .logo-img:hover {
-    transform: scale(1.05);
-}
-
-.logo-fallback {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--dark-blue);
-    text-transform: uppercase;
-    letter-spacing: -1px;
+    transform: scale(1.03);
 }
 
 .logo-icon {
