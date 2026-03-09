@@ -179,6 +179,27 @@ body {
     color: var(--dark-blue);
 }
 
+.logo-img {
+    height: 60px;
+    /* Tamaño optimizado para impacto visual */
+    width: auto;
+    display: block;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+.logo-fallback {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
 .logo-icon {
     color: var(--primary-yellow);
     width: 26px;
@@ -268,8 +289,9 @@ body {
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    gap: 5rem;
+    align-items: flex-start;
+    /* Alineado arriba para un look más editorial */
 }
 
 .section-title {
@@ -318,8 +340,12 @@ body {
 
 .about-image img {
     width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    height: 450px;
+    object-fit: cover;
+    border-radius: 4px;
+    /* Bordes más rectos para look industrial serio */
+    box-shadow: 20px 20px 0px var(--primary-yellow);
+    /* Detalle de diseño premium */
 }
 
 /* Servicios */

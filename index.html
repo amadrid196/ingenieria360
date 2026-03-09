@@ -35,8 +35,10 @@
     <header class="navbar">
         <div class="container navbar-content">
             <a href="index.html" class="logo">
-                <i data-lucide="settings" class="logo-icon"></i>
-                <span class="logo-text">ingeniería <span>360</span></span>
+                <img src="img/logo.png" alt="Ingeniería 360 Logo" class="logo-img"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="logo-fallback" style="display:none;">ingeniería <span
+                        style="color:var(--primary-yellow)">360</span></span>
             </a>
 
             <nav class="nav-links">
@@ -70,6 +72,9 @@
     <!-- Sobre Nosotros -->
     <section id="nosotros" class="about section-padding">
         <div class="container about-grid">
+            <div class="about-image">
+                <img src="img/nosotros.jpg" alt="Infraestructura Industrial">
+            </div>
             <div class="about-text">
                 <h2 class="section-title">Sobre Nosotros</h2>
                 <h3 class="section-subtitle">Misión</h3>
@@ -89,9 +94,6 @@
                     <div class="badge"><i data-lucide="shield" class="badge-icon"></i> Cumplimiento NFPA</div>
                     <div class="badge"><i data-lucide="zap" class="badge-icon"></i> Continuidad 24/7</div>
                 </div>
-            </div>
-            <div class="about-image">
-                <img src="img/nosotros.jpg" alt="Ingenieros revisando planos en obra">
             </div>
         </div>
     </section>
@@ -146,7 +148,7 @@
     <!-- Por Qué Elegirnos -->
     <section class="why-choose-us section-padding">
         <div class="container">
-            <h2 class="section-title text-white text-center mb-5">¿Por Qué Elegirnos?</h2>
+            <h2 class="section-title text-center mb-5" style="color: var(--white);">¿Por Qué Elegirnos?</h2>
             <div class="values-grid">
                 <div class="value-item">
                     <div class="value-icon"><i data-lucide="award"></i></div>
