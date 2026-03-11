@@ -43,6 +43,20 @@ body {
     background-color: var(--white);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+p,
+li {
+    text-wrap: pretty;
+}
+
 /* Clases Útiles */
 .container {
     width: 90%;
@@ -149,7 +163,8 @@ body {
     gap: 0.5rem;
 }
 
-.contact-info i {
+.contact-info i,
+.contact-info .whatsapp-icon {
     width: 14px;
     height: 14px;
     color: var(--primary-yellow);
@@ -545,6 +560,10 @@ body {
     flex-shrink: 0;
 }
 
+.footer-icon.whatsapp-icon {
+    margin-top: 0;
+}
+
 .footer-bottom {
     background-color: rgba(0, 0, 0, 0.15);
     padding: 1rem 0;
@@ -669,5 +688,91 @@ body {
     .hero-buttons {
         flex-direction: column;
         gap: 1rem;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-padding {
+        padding: 3rem 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        text-wrap: balance;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        text-wrap: balance;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        text-wrap: pretty;
+    }
+
+    .about-image img {
+        height: 300px;
+        box-shadow: 10px 10px 0px var(--primary-yellow);
+    }
+
+    .service-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .portfolio-item {
+        height: 250px;
+    }
+
+    .footer-contact-block {
+        padding: 1.2rem;
+        word-break: break-word;
+        /* Prevents email from breaking layout */
+    }
+
+    .contact-line {
+        font-size: 14px;
+        /* Ensure lines fit in mobile */
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .contact-line svg,
+    .contact-line i {
+        margin: 0;
+    }
+
+    .service-detail-block {
+        padding: 1.5rem;
+    }
+
+    .service-detail-block h2 {
+        font-size: 1.4rem;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 0.8rem;
+        text-align: center;
+    }
+
+    .service-detail-icon {
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .service-detail-block ul {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .service-detail-block li {
+        font-size: 1rem;
+        padding-left: 1.6rem;
     }
 }
