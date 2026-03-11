@@ -235,7 +235,7 @@ body {
     position: relative;
     height: 80vh;
     min-height: 550px;
-    background-image: url('../img/hero-inicio.jpg');
+    background-image: url('../img/logo-fondo.jpeg');
     /* Obra Civil */
     background-size: cover;
     background-position: center;
